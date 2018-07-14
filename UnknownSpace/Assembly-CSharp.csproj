@@ -84,15 +84,11 @@
     <Compile Include="Assets\scripts\upgradeShip.cs" />
     <Compile Include="Assets\scripts\winOrLose.cs" />
     <Compile Include="Assets\spawnAsteroids.cs" />
-    <None Include="Assets\HUD Text\Examples\Models\Orc\Orc Skin.shader" />
-    <None Include="Assets\HUD Text\Examples\Atlases\Arimo20.txt" />
-    <None Include="Assets\HUD Text\Examples\Atlases\Large.txt" />
-    <None Include="Assets\HUD Text\Examples\Models\Orc Armor\Orc Armor.shader" />
     <Reference Include="UnityEditor.StandardEvents">
-      <HintPath>C:/Users/EdwardSmith/Documents/My dirty hobby/Hardcore/UnknownSpace/Library/ScriptAssemblies/UnityEditor.StandardEvents.dll</HintPath>
+      <HintPath>C:/Users/EdwardSmith/Documents/GitHub/unknownSpace/UnknownSpace/Library/ScriptAssemblies/UnityEditor.StandardEvents.dll</HintPath>
     </Reference>
     <Reference Include="Unity.PackageManagerUI.Editor">
-      <HintPath>C:/Users/EdwardSmith/Documents/My dirty hobby/Hardcore/UnknownSpace/Library/ScriptAssemblies/Unity.PackageManagerUI.Editor.dll</HintPath>
+      <HintPath>C:/Users/EdwardSmith/Documents/GitHub/unknownSpace/UnknownSpace/Library/ScriptAssemblies/Unity.PackageManagerUI.Editor.dll</HintPath>
     </Reference>
     <Reference Include="UnityEngine.AIModule">
       <HintPath>C:/Program Files/Unity/Hub/Editor/2018.1.0f2/Editor/Data/Managed/UnityEngine/UnityEngine.AIModule.dll</HintPath>

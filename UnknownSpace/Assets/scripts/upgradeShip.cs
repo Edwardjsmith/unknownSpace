@@ -41,7 +41,7 @@ public class upgradeShip : MonoBehaviour {
         }
         else
         {
-            repairButton.GetComponentsInChildren<Text>()[0].text = "Not enough gold to repair..";
+            repairButton.GetComponentsInChildren<Text>()[0].text = "Not enough gold";
         }
     }
 
