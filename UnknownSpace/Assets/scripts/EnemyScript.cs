@@ -33,6 +33,7 @@ public class EnemyScript : MonoBehaviour
     Vector3 gunDir;
 
     public AudioSource laser;
+    public GameObject shieldasset;
  
     
     // Use this for initialization
@@ -51,6 +52,7 @@ public class EnemyScript : MonoBehaviour
                 shipQuality = 1;
                 shield = 0;
                 myShield = null;
+                shieldasset = null;
                 break;
             }
             case shipType.med:
@@ -78,6 +80,7 @@ public class EnemyScript : MonoBehaviour
         if(myShield != null && shield <= 0)
         {
             myShield.enabled = false;
+            Destroy(shieldasset);
         }
         healthBar.value = calculateHealth();
 

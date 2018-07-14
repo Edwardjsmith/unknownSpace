@@ -79,6 +79,7 @@ public class fire : MonoBehaviour
             if (other.GetComponent<EnemyScript>().shield > 0)
             {
                 other.GetComponent<EnemyScript>().shield -= playerAttributes.instance.damageUpgradeLevel;
+                other.GetComponentInChildren<shimmer>().duration = 1.0f;
             }
             else
             {
@@ -104,6 +105,7 @@ public class fire : MonoBehaviour
             if (other.GetComponent<EnemyScript>().shield > 0)
             {
                 other.GetComponent<EnemyScript>().shield -= playerAttributes.instance.damageUpgradeLevel;
+                other.GetComponentInChildren<shimmer>().duration = 1.0f;
             }
             else 
             {

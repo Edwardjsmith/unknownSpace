@@ -38,6 +38,7 @@ public class movement : MonoBehaviour
             if (other.GetComponent<EnemyScript>().shield > 0)
             {
                 other.GetComponent<EnemyScript>().damageDone(0);
+                other.GetComponentInChildren<shimmer>().duration = 1.0f;
             }
             else
             {
@@ -54,6 +55,7 @@ public class movement : MonoBehaviour
             if (other.GetComponent<EnemyScript>().shield > 0)
             {
                 other.GetComponent<EnemyScript>().shield -= asteroidDamage;
+                other.GetComponentInChildren<shimmer>().duration = 1.0f;
             }
             else
             {
