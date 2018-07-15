@@ -51,6 +51,8 @@ public class enemyFire : MonoBehaviour
             playerAttributes.instance.sailHealth--;
         }
         Instantiate(hit, transform.position, transform.rotation);
+        hit.transform.parent = other.gameObject.transform;
+        
         boom.Play();
         Destroy(gameObject);
 

@@ -84,7 +84,14 @@
     <Compile Include="Assets\scripts\upgradeShip.cs" />
     <Compile Include="Assets\scripts\winOrLose.cs" />
     <Compile Include="Assets\shimmer.cs" />
+    <Compile Include="Assets\Simple Health Bar\_Asteroids Example\Scripts\AsteroidController.cs" />
+    <Compile Include="Assets\Simple Health Bar\_Asteroids Example\Scripts\GameManager.cs" />
+    <Compile Include="Assets\Simple Health Bar\_Asteroids Example\Scripts\HealthPickupController.cs" />
+    <Compile Include="Assets\Simple Health Bar\_Asteroids Example\Scripts\PlayerController.cs" />
+    <Compile Include="Assets\Simple Health Bar\_Asteroids Example\Scripts\PlayerHealth.cs" />
+    <Compile Include="Assets\Simple Health Bar\Scripts\SimpleHealthBar.cs" />
     <Compile Include="Assets\spawnAsteroids.cs" />
+    <None Include="Assets\Simple Health Bar\README.txt" />
     <Reference Include="UnityEditor.StandardEvents">
       <HintPath>C:/Users/EdwardSmith/Documents/GitHub/unknownSpace/UnknownSpace/Library/ScriptAssemblies/UnityEditor.StandardEvents.dll</HintPath>
     </Reference>

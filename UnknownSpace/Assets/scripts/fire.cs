@@ -63,7 +63,10 @@ public class fire : MonoBehaviour
         {
             other.GetComponent<EnemyScript>().damageDone(playerAttributes.instance.damageUpgradeLevel);
             Instantiate(hit, transform.position, transform.rotation);
+            hit.transform.parent = other.gameObject.transform;
+         
             Destroy(gameObject);
+
             if (other.GetComponent<EnemyScript>().enemyHealth() <= 0)
             {
                 Destroy(other.gameObject);
@@ -73,6 +76,7 @@ public class fire : MonoBehaviour
                 
                 winOrLose.numberOfEnemies--;
             }
+
         }
         if (other.tag == "EnemyMed")
         {
@@ -97,6 +101,8 @@ public class fire : MonoBehaviour
             }
 
             Instantiate(hit, transform.position, transform.rotation);
+            hit.transform.parent = other.gameObject.transform;
+        
             Destroy(gameObject);
         }
 
@@ -123,7 +129,8 @@ public class fire : MonoBehaviour
                 }
             }
             Instantiate(hit, transform.position, transform.rotation);
-
+            hit.transform.parent = other.gameObject.transform;
+            
             Destroy(gameObject);
         }
 

@@ -30,6 +30,8 @@ public class movement : MonoBehaviour
         {
             playerAttributes.instance.playerHealth -= 3;
             Instantiate(hit, transform.position, transform.rotation);
+            hit.transform.parent = other.gameObject.transform;
+            Destroy(hit, 2.0f);
             Destroy(gameObject);
         }
 
@@ -47,6 +49,8 @@ public class movement : MonoBehaviour
             }
 
             Instantiate(hit, transform.position, transform.rotation);
+            hit.transform.parent = other.gameObject.transform;
+        
             Destroy(gameObject);
 
         }
@@ -65,13 +69,17 @@ public class movement : MonoBehaviour
 
             
             Instantiate(hit, transform.position, transform.rotation);
-            
+            hit.transform.parent = other.gameObject.transform;
+            Destroy(hit, 2.0f);
+
             Destroy(gameObject);
         }
         if (other.tag == "EnemySmall")
         {
             other.GetComponent<EnemyScript>().damageDone(asteroidDamage);
             Instantiate(hit, transform.position, transform.rotation);
+            hit.transform.parent = other.gameObject.transform;
+            Destroy(hit, 2.0f);
             boom.Play();
             Destroy(gameObject);
         }
