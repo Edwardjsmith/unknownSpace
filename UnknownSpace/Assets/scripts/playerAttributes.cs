@@ -58,7 +58,7 @@ public class playerAttributes : MonoBehaviour {
         {
 
             playerMaxHealth = 100;
-            playerSpeed = 1000 * Time.deltaTime;
+            playerSpeed = 4000 * Time.deltaTime;
             playerTurnSpeed = 20000 * Time.deltaTime;
             reloadSpeed = 200;
             maxSailHealth = 4;
@@ -69,7 +69,7 @@ public class playerAttributes : MonoBehaviour {
         {
 
             playerMaxHealth = 150;
-            playerSpeed = 1200  * Time.deltaTime; ;
+            playerSpeed = 4500  * Time.deltaTime; ;
             playerTurnSpeed = 50000 * Time.deltaTime; 
             reloadSpeed = 100;
             maxSailHealth = 6;
@@ -80,7 +80,7 @@ public class playerAttributes : MonoBehaviour {
         {
 
             playerMaxHealth = 200;
-            playerSpeed = 1500  * Time.deltaTime; ;
+            playerSpeed = 5000  * Time.deltaTime; ;
             playerTurnSpeed = 80000  * Time.deltaTime; ;
             reloadSpeed = 50;
             maxSailHealth = 10;

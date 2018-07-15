@@ -10,14 +10,14 @@ public class EnemyScript : MonoBehaviour
 
     public shipType thisShip;
 
-    public Slider healthBar;
+    //public Slider healthBar;
 
     public float shield;
     float health;
     float maxHealth = shipQuality * 2;
     float speed = shipQuality / 2;
     float rotationSpeed = shipQuality / 3;
-    float reload = shipQuality * 100;
+    float reload = shipQuality * 200;
     float coolDown;
 
     public Collider2D myShield;
@@ -34,12 +34,13 @@ public class EnemyScript : MonoBehaviour
 
     public AudioSource laser;
     public GameObject shieldasset;
- 
+
+    public float fireRange = 0;
     
     // Use this for initialization
     void Start()
     {
-
+        fireRange = fireRange * shipQuality;
         GameObject player = GameObject.FindGameObjectWithTag("Player");
         target = player.transform;
 
@@ -76,13 +77,14 @@ public class EnemyScript : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        RaycastHit2D hit;
        
         if(myShield != null && shield <= 0)
         {
             myShield.enabled = false;
             Destroy(shieldasset);
         }
-        healthBar.value = calculateHealth();
+        //healthBar.value = calculateHealth();
 
 
         coolDown--;
@@ -114,24 +116,14 @@ public class EnemyScript : MonoBehaviour
             if (Vector2.Distance(transform.position, target.position) <= 10 && Vector2.Distance(transform.position, target.position) > 0)
             {
 
-                gunDir = target.position - firePointLeft.position;
 
-                float rotationValue = (Mathf.Atan2(gunDir.y, gunDir.x) * Mathf.Rad2Deg) + 60;
-                Quaternion q = Quaternion.AngleAxis(rotationValue, Vector3.forward);
-
-                transform.rotation = Quaternion.Slerp(transform.rotation, q, rotationSpeed * Time.deltaTime);
-
-
-
-                //Quaternion rotationValue = Quaternion.LookRotation(target.position - firePointLeft.position);
-                //transform.rotation = Quaternion.Lerp(transform.rotation, rotationValue, rotationSpeed * Time.deltaTime);
 
 
 
 
                 if (coolDown <= 0)
                 {
-                    Instantiate(ball, firePointLeft.position, transform.rotation);
+                    Instantiate(ball, firePointLeft);
 
                     laser.Play();
 

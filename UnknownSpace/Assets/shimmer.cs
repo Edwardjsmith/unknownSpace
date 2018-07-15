@@ -40,6 +40,10 @@ public class shimmer : MonoBehaviour
             yield return new WaitForSeconds(1.5f);
             duration = fixedDuration;
         }
+        else
+        {
+            yield return null;
+        }
     }
 }
 

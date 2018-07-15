@@ -18,10 +18,10 @@ public class enemyFire : MonoBehaviour
         Rigidbody2D rigid = GetComponent<Rigidbody2D>();
 
 
-        rigid.velocity = transform.right * speed;
+        rigid.velocity = transform.up * speed;
 
 
-        Destroy(gameObject, 2.0f);
+        Destroy(gameObject, 6.0f);
     }
 	
 	// Update is called once per frame
